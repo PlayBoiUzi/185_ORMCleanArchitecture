@@ -4,3 +4,6 @@ async function connectDatabase() {
     try {
         await db.sequelize.authenticate();
         console.log('Database connected successfully');
+
+        await db.sequelize.sync({alter: true});
+        console.log('Database synchronized');

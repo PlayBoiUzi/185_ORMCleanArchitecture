@@ -1,0 +1,28 @@
+{
+  "name": "pertemuan-9",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PlayBoiUzi/185_ORMCleanArchitecture.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/PlayBoiUzi/185_ORMCleanArchitecture/issues"
+  },
+  "homepage": "https://github.com/PlayBoiUzi/185_ORMCleanArchitecture#readme",
+  "dependencies": {
+    "dotenv": "^18.0.10",
+    "express": "^5.3.0",
+    "nodemon": "^3.1.14",
+    "pg": "^8.23.1",
+    "sequelize-cli": "^6.6.5"
+  }
+}

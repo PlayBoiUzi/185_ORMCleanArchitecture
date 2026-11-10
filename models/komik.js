@@ -17,7 +17,8 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false
     }
   }, {
-    tableName: 'Komiks',
+    tableName: 'komik',    // Menentukan nama tabel agar tetap 'komik'
+    timestamps: false     // Mengabaikan createdAt & updatedAt jika tabel manual
   });
 
   return Komik;

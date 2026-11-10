@@ -1,19 +1,18 @@
-require("dotenv").config();
-
 const express = require('express');
-const connectDatabase = require('./config/db');
 const app = express();
-const PORT = process.env.PORT;
+const PORT = 3000;
+const connectDatabase = require('./config/db');
+const komikRoutes = require('./route/komikRoutes');
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: true}));
-app.use('/api', require('./routes/komikRoutes'));
+app.use(express.urlencoded({ extended: false }));
 
-async function startServer(){
-    await connectDatabase();
+// Mounting router
+app.use('/', komikRoutes);
+
+// Jalankan Database & Server
+connectDatabase().then(() => {
     app.listen(PORT, () => {
-        console.log(`Server running at http://localhost:${PORT}`);
+        console.log(`Server running on http://localhost:${PORT}`);
     });
-}
-
-startServer();
+});

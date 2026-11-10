@@ -17,3 +17,6 @@ const production = {
       rejectUnauthorized: false
     }
   }
+};
+
+module.exports = { development, production };
